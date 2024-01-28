@@ -45,10 +45,10 @@ let cameraFront, cameraTop, insetWidth, insetHeight;
 let boom = new THREE.Object3D();
 
 const textureLoader = new THREE.TextureLoader();
-const space = textureLoader.load('./assets/bkg1_back.png');
-const sparkTexture = textureLoader.load('./assets/spark1.png');
-const metalTextureColor = textureLoader.load('./textures/Metal043A_1K_Color.jpg');
-const metalTextureRoughness = textureLoader.load('./textures/Metal043A_1K_Roughness.jpg');
+const space = textureLoader.load('./assets/images/bkg1_back.png');
+const sparkTexture = textureLoader.load('./assets/images/spark1.png');
+const metalTextureColor = textureLoader.load('./assets/textures/Metal043A_1K_Color.jpg');
+const metalTextureRoughness = textureLoader.load('./assets/textures/Metal043A_1K_Roughness.jpg');
 
 //const color = new THREE.Color();
 const groupRight = new THREE.Object3D();
@@ -273,7 +273,7 @@ function createParticles(){
      const material = new THREE.ShaderMaterial( {
           uniforms: {
                color: { value: new THREE.Color( 0xffffff ) },
-               pointTexture: { value: new THREE.TextureLoader().load( './assets/spark1.png' ) }
+               pointTexture: { value: new THREE.TextureLoader().load( './assets/images/spark1.png' ) }
           },
           vertexShader: document.getElementById( 'vertexshader' ).textContent,
           fragmentShader: document.getElementById( 'fragmentshader' ).textContent,
